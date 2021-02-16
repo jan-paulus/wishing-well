@@ -5,62 +5,103 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { MatchResults } from "@stencil/router";
+import { RouterHistory } from "@stencil/router";
 export namespace Components {
-    interface AppHome {
-    }
-    interface AppProfile {
-        "match": MatchResults;
-    }
     interface AppRoot {
+    }
+    interface WbButton {
+        "type": 'button' | 'submit';
+    }
+    interface WbCancel {
+        "history": RouterHistory;
+    }
+    interface WbError {
+    }
+    interface WbHome {
+    }
+    interface WbSuccess {
     }
 }
 declare global {
-    interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {
-    }
-    var HTMLAppHomeElement: {
-        prototype: HTMLAppHomeElement;
-        new (): HTMLAppHomeElement;
-    };
-    interface HTMLAppProfileElement extends Components.AppProfile, HTMLStencilElement {
-    }
-    var HTMLAppProfileElement: {
-        prototype: HTMLAppProfileElement;
-        new (): HTMLAppProfileElement;
-    };
     interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {
     }
     var HTMLAppRootElement: {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
     };
+    interface HTMLWbButtonElement extends Components.WbButton, HTMLStencilElement {
+    }
+    var HTMLWbButtonElement: {
+        prototype: HTMLWbButtonElement;
+        new (): HTMLWbButtonElement;
+    };
+    interface HTMLWbCancelElement extends Components.WbCancel, HTMLStencilElement {
+    }
+    var HTMLWbCancelElement: {
+        prototype: HTMLWbCancelElement;
+        new (): HTMLWbCancelElement;
+    };
+    interface HTMLWbErrorElement extends Components.WbError, HTMLStencilElement {
+    }
+    var HTMLWbErrorElement: {
+        prototype: HTMLWbErrorElement;
+        new (): HTMLWbErrorElement;
+    };
+    interface HTMLWbHomeElement extends Components.WbHome, HTMLStencilElement {
+    }
+    var HTMLWbHomeElement: {
+        prototype: HTMLWbHomeElement;
+        new (): HTMLWbHomeElement;
+    };
+    interface HTMLWbSuccessElement extends Components.WbSuccess, HTMLStencilElement {
+    }
+    var HTMLWbSuccessElement: {
+        prototype: HTMLWbSuccessElement;
+        new (): HTMLWbSuccessElement;
+    };
     interface HTMLElementTagNameMap {
-        "app-home": HTMLAppHomeElement;
-        "app-profile": HTMLAppProfileElement;
         "app-root": HTMLAppRootElement;
+        "wb-button": HTMLWbButtonElement;
+        "wb-cancel": HTMLWbCancelElement;
+        "wb-error": HTMLWbErrorElement;
+        "wb-home": HTMLWbHomeElement;
+        "wb-success": HTMLWbSuccessElement;
     }
 }
 declare namespace LocalJSX {
-    interface AppHome {
-    }
-    interface AppProfile {
-        "match"?: MatchResults;
-    }
     interface AppRoot {
     }
+    interface WbButton {
+        "type"?: 'button' | 'submit';
+    }
+    interface WbCancel {
+        "history"?: RouterHistory;
+    }
+    interface WbError {
+    }
+    interface WbHome {
+    }
+    interface WbSuccess {
+    }
     interface IntrinsicElements {
-        "app-home": AppHome;
-        "app-profile": AppProfile;
         "app-root": AppRoot;
+        "wb-button": WbButton;
+        "wb-cancel": WbCancel;
+        "wb-error": WbError;
+        "wb-home": WbHome;
+        "wb-success": WbSuccess;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
-            "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "wb-button": LocalJSX.WbButton & JSXBase.HTMLAttributes<HTMLWbButtonElement>;
+            "wb-cancel": LocalJSX.WbCancel & JSXBase.HTMLAttributes<HTMLWbCancelElement>;
+            "wb-error": LocalJSX.WbError & JSXBase.HTMLAttributes<HTMLWbErrorElement>;
+            "wb-home": LocalJSX.WbHome & JSXBase.HTMLAttributes<HTMLWbHomeElement>;
+            "wb-success": LocalJSX.WbSuccess & JSXBase.HTMLAttributes<HTMLWbSuccessElement>;
         }
     }
 }

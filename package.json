@@ -1,5 +1,5 @@
 {
-  "name": "wunschbrunnen-app",
+  "name": "wishing-well",
   "private": true,
   "version": "0.0.1",
   "description": "Stencil App Starter",
@@ -12,7 +12,16 @@
   },
   "devDependencies": {
     "@stencil/core": "^2.0.0",
-    "@stencil/router": "^1.0.1"
+    "@stencil/postcss": "^2.0.0",
+    "@stencil/router": "^1.0.1",
+    "@types/autoprefixer": "^10.2.0",
+    "autoprefixer": "^10.2.4",
+    "postcss": "^8.2.6",
+    "tailwindcss": "^2.0.3"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "stripe": "^8.135.0"
+  }
 }
