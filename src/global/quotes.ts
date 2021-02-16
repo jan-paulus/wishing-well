@@ -152,12 +152,13 @@ export const WISH_QUOTES = [
   'Never stop believing in yourself. Never think of quitting in life. You can do everything and you can get through every problem if you don’t quit and if you have belief in yourself. I will always be there for you to help you out whenever you need me and I will stand beside you every time. Wishing you the best of luck for the future.',
   'Be prepared for any kind of tasks every time. Always believe in yourself. If you follow these two things then you will surely get success in every field of life. I hope that you win each task and you have a very happy life. Have a best of luck in all your life.',
   'Never ever think of quitting. Think about winning and you will win for sure. Keep on running and struggling and then there is no force that can stop you from getting success in life. Have courage and belief in yourself and then go ahead and face every problem with all the courage. Then nothing can stop you from winning. Best of luck to you my friend.',
-  'My prayers and best wishes are always with you. May you have a very good luck. You can make your future bright and shining when you will believe in yourself and never think of quitting. Good luck with everything you do!',
 ];
 
-export const getQuoteOfTheDay = (): string => {
-  const today = new Date();
-  const day = Number(`${today.getMonth()}${today.getDate()}`);
-  const index = WISH_QUOTES.length % day;
-  return WISH_QUOTES[index];
+export const getQuote = (): string => {
+  const counter = Number(localStorage.getItem('visit') || 0);
+
+  // update for next quote
+  localStorage.setItem('visit', String(counter + 1));
+
+  return WISH_QUOTES[counter % WISH_QUOTES.length];
 };

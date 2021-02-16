@@ -1,18 +1,18 @@
-import { Component, h, Host } from '@stencil/core';
+import { Component, h, Host, JSX } from '@stencil/core';
 
 @Component({
-  tag: 'wb-success',
+  tag: 'ww-success',
   shadow: false,
 })
 export class SuccessRoute {
-  public render(): void {
+  public render(): JSX.Element {
     return (
       <Host>
         Möge dein Wunsch in Erfüllung gehen!
         <br />
         Why not start another one?
         <stencil-route-link url="/">
-          <wb-button>Home</wb-button>
+          <ww-button>Home</ww-button>
         </stencil-route-link>
       </Host>
     );

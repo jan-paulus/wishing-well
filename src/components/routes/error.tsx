@@ -1,16 +1,16 @@
-import { Component, h, Host } from '@stencil/core';
+import { Component, h, Host, JSX } from '@stencil/core';
 
 @Component({
-  tag: 'wb-error',
+  tag: 'ww-error',
   shadow: false,
 })
 export class ErrorRoute {
-  public render(): void {
+  public render(): JSX.Element {
     return (
       <Host>
         Oh no! Something went wrong. Please try again!
         <stencil-route-link url="/">
-          <wb-button>Home</wb-button>
+          <ww-button>Home</ww-button>
         </stencil-route-link>
       </Host>
     );

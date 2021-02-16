@@ -9,17 +9,20 @@ import { RouterHistory } from "@stencil/router";
 export namespace Components {
     interface AppRoot {
     }
-    interface WbButton {
+    interface WwButton {
+        "kind": 'primary' | 'secondary' | 'tertiary';
         "type": 'button' | 'submit';
     }
-    interface WbCancel {
+    interface WwCancel {
         "history": RouterHistory;
     }
-    interface WbError {
+    interface WwError {
     }
-    interface WbHome {
+    interface WwHome {
     }
-    interface WbSuccess {
+    interface WwQuote {
+    }
+    interface WwSuccess {
     }
 }
 declare global {
@@ -29,67 +32,78 @@ declare global {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
     };
-    interface HTMLWbButtonElement extends Components.WbButton, HTMLStencilElement {
+    interface HTMLWwButtonElement extends Components.WwButton, HTMLStencilElement {
     }
-    var HTMLWbButtonElement: {
-        prototype: HTMLWbButtonElement;
-        new (): HTMLWbButtonElement;
+    var HTMLWwButtonElement: {
+        prototype: HTMLWwButtonElement;
+        new (): HTMLWwButtonElement;
     };
-    interface HTMLWbCancelElement extends Components.WbCancel, HTMLStencilElement {
+    interface HTMLWwCancelElement extends Components.WwCancel, HTMLStencilElement {
     }
-    var HTMLWbCancelElement: {
-        prototype: HTMLWbCancelElement;
-        new (): HTMLWbCancelElement;
+    var HTMLWwCancelElement: {
+        prototype: HTMLWwCancelElement;
+        new (): HTMLWwCancelElement;
     };
-    interface HTMLWbErrorElement extends Components.WbError, HTMLStencilElement {
+    interface HTMLWwErrorElement extends Components.WwError, HTMLStencilElement {
     }
-    var HTMLWbErrorElement: {
-        prototype: HTMLWbErrorElement;
-        new (): HTMLWbErrorElement;
+    var HTMLWwErrorElement: {
+        prototype: HTMLWwErrorElement;
+        new (): HTMLWwErrorElement;
     };
-    interface HTMLWbHomeElement extends Components.WbHome, HTMLStencilElement {
+    interface HTMLWwHomeElement extends Components.WwHome, HTMLStencilElement {
     }
-    var HTMLWbHomeElement: {
-        prototype: HTMLWbHomeElement;
-        new (): HTMLWbHomeElement;
+    var HTMLWwHomeElement: {
+        prototype: HTMLWwHomeElement;
+        new (): HTMLWwHomeElement;
     };
-    interface HTMLWbSuccessElement extends Components.WbSuccess, HTMLStencilElement {
+    interface HTMLWwQuoteElement extends Components.WwQuote, HTMLStencilElement {
     }
-    var HTMLWbSuccessElement: {
-        prototype: HTMLWbSuccessElement;
-        new (): HTMLWbSuccessElement;
+    var HTMLWwQuoteElement: {
+        prototype: HTMLWwQuoteElement;
+        new (): HTMLWwQuoteElement;
+    };
+    interface HTMLWwSuccessElement extends Components.WwSuccess, HTMLStencilElement {
+    }
+    var HTMLWwSuccessElement: {
+        prototype: HTMLWwSuccessElement;
+        new (): HTMLWwSuccessElement;
     };
     interface HTMLElementTagNameMap {
         "app-root": HTMLAppRootElement;
-        "wb-button": HTMLWbButtonElement;
-        "wb-cancel": HTMLWbCancelElement;
-        "wb-error": HTMLWbErrorElement;
-        "wb-home": HTMLWbHomeElement;
-        "wb-success": HTMLWbSuccessElement;
+        "ww-button": HTMLWwButtonElement;
+        "ww-cancel": HTMLWwCancelElement;
+        "ww-error": HTMLWwErrorElement;
+        "ww-home": HTMLWwHomeElement;
+        "ww-quote": HTMLWwQuoteElement;
+        "ww-success": HTMLWwSuccessElement;
     }
 }
 declare namespace LocalJSX {
     interface AppRoot {
     }
-    interface WbButton {
+    interface WwButton {
+        "kind"?: 'primary' | 'secondary' | 'tertiary';
         "type"?: 'button' | 'submit';
     }
-    interface WbCancel {
+    interface WwCancel {
         "history"?: RouterHistory;
     }
-    interface WbError {
+    interface WwError {
     }
-    interface WbHome {
+    interface WwHome {
     }
-    interface WbSuccess {
+    interface WwQuote {
+    }
+    interface WwSuccess {
     }
     interface IntrinsicElements {
         "app-root": AppRoot;
-        "wb-button": WbButton;
-        "wb-cancel": WbCancel;
-        "wb-error": WbError;
-        "wb-home": WbHome;
-        "wb-success": WbSuccess;
+        "ww-button": WwButton;
+        "ww-cancel": WwCancel;
+        "ww-error": WwError;
+        "ww-home": WwHome;
+        "ww-quote": WwQuote;
+        "ww-success": WwSuccess;
     }
 }
 export { LocalJSX as JSX };
@@ -97,11 +111,12 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
-            "wb-button": LocalJSX.WbButton & JSXBase.HTMLAttributes<HTMLWbButtonElement>;
-            "wb-cancel": LocalJSX.WbCancel & JSXBase.HTMLAttributes<HTMLWbCancelElement>;
-            "wb-error": LocalJSX.WbError & JSXBase.HTMLAttributes<HTMLWbErrorElement>;
-            "wb-home": LocalJSX.WbHome & JSXBase.HTMLAttributes<HTMLWbHomeElement>;
-            "wb-success": LocalJSX.WbSuccess & JSXBase.HTMLAttributes<HTMLWbSuccessElement>;
+            "ww-button": LocalJSX.WwButton & JSXBase.HTMLAttributes<HTMLWwButtonElement>;
+            "ww-cancel": LocalJSX.WwCancel & JSXBase.HTMLAttributes<HTMLWwCancelElement>;
+            "ww-error": LocalJSX.WwError & JSXBase.HTMLAttributes<HTMLWwErrorElement>;
+            "ww-home": LocalJSX.WwHome & JSXBase.HTMLAttributes<HTMLWwHomeElement>;
+            "ww-quote": LocalJSX.WwQuote & JSXBase.HTMLAttributes<HTMLWwQuoteElement>;
+            "ww-success": LocalJSX.WwSuccess & JSXBase.HTMLAttributes<HTMLWwSuccessElement>;
         }
     }
 }

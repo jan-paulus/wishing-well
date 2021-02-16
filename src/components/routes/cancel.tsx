@@ -2,7 +2,7 @@ import { Component, Prop } from '@stencil/core';
 import { RouterHistory } from '@stencil/router';
 
 @Component({
-  tag: 'wb-cancel',
+  tag: 'ww-cancel',
   shadow: false,
 })
 export class CancelRoute {
